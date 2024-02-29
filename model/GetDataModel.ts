@@ -45,6 +45,7 @@ export interface ActionButton {
 export interface FeatureSectionMedia {
   id: string;
   image: Image;
+  youtubeVideoEmbed: string;
 }
 
 export interface Image {
@@ -52,4 +53,5 @@ export interface Image {
   height: number;
   width: number;
   id: string;
+  fileName: string;
 }

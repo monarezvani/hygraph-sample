@@ -13,7 +13,7 @@ export default async function Home() {
         <div>
           {subModels?.map((subModel) => (
             <div key={subModel.id}>
-              {subModel.subSections.map((subSection) => (
+              {subModel.subSections.map((subSection, index) => (
                 <div key={subSection.id}>
                   {subSection.subBlocks.heroTitle && (
                     <Hero
@@ -24,16 +24,23 @@ export default async function Home() {
                   )}
                   {subSection.subBlocks.featureSectionTitle && (
                     <FeatureSection
-                      featureSectionTitle={
-                        subSection.subBlocks.featureSectionTitle
-                      }
-                      featureSectionDescription={
-                        subSection.subBlocks.featureSectionDescription
-                      }
-                      featureSectionActionButton={
-                        subSection.subBlocks.featureSectionActionButton
-                      }
-                      featureSectionLabel= {subSection.subBlocks.featureSectionLabel}
+                      // featureSectionTitle={
+                      //   subSection.subBlocks.featureSectionTitle
+                      // }
+                      // featureSectionDescription={
+                      //   subSection.subBlocks.featureSectionDescription
+                      // }
+                      // featureSectionActionButton={
+                      //   subSection.subBlocks.featureSectionActionButton
+                      // }
+                      // featureSectionLabel={
+                      //   subSection.subBlocks.featureSectionLabel
+                      // }
+                      // index={index}
+                      // featureSectionMedia={
+                      //   subSection.subBlocks.featureSectionMedia
+                      // }
+                      featureSections={subModel.subSections}
                     />
                   )}
                   {subSection.subBlocks.calloutTitle && (
