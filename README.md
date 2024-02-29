@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Overview
 
-## Getting Started
+This project utilizes Next.js for server-side rendering (SSR) to accommodate frequent data changes within a Content Management System (CMS) and is based on the necessity for immediate data freshness and SEO considerations.
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# @apollo/client vs. graphql-request
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The project opts for @apollo/client over graphql-request. This decision is influenced by the active maintenance and frequent updates of @apollo/client, ensuring compatibility with the latest features and best practices. As of the last update, @apollo/client provides a more reliable and up-to-date solution.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Webhooks Integration
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+To maintain data freshness and trigger updates upon CMS content changes, the project recommends setting up webhooks within the CMS. These webhooks should notify the Next.js application whenever content is added, updated, or deleted.
 
-## Learn More
+Upon receiving a webhook notification, the application will initiate a rebuild of affected pages using either SSR or ISR, depending on the chosen strategy. This ensures that the latest content is promptly reflected in the Next.js web application, enhancing user experience and search engine visibility.
 
-To learn more about Next.js, take a look at the following resources:
+# Getting Started
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To get started with the project:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1- Install dependencies using npm install.
+2- Run the development server using npm run dev.
 
-## Deploy on Vercel
+# Additional Resources
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Next.js Documentation for in-depth guides and tutorials: https://nextjs.org/docs
+Apollo Client Documentation for integrating GraphQL with Next.js using @apollo/client: https://www.apollographql.com/docs/react/api/react/ssr
+CMS Documentation for setting up model and understanding data management options: https://hygraph.com/docs
