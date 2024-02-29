@@ -14,8 +14,10 @@ const FeatureSection = ({
   featureSectionTitle,
   featureSectionDescription,
   featureSectionActionButton,
+  featureSectionLabel,
 }: FeatureSectionProps) => (
   <div>
+    <h4>{featureSectionLabel}</h4>
     <h2>{featureSectionTitle}</h2>
     <p>{featureSectionDescription}</p>
     {featureSectionActionButton && (

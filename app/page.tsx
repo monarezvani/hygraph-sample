@@ -33,6 +33,7 @@ export default async function Home() {
                       featureSectionActionButton={
                         subSection.subBlocks.featureSectionActionButton
                       }
+                      featureSectionLabel= {subSection.subBlocks.featureSectionLabel}
                     />
                   )}
                   {subSection.subBlocks.calloutTitle && (
