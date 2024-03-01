@@ -1,0 +1,30 @@
+.button {
+  @apply px-5 py-2.5 rounded-lg font-semibold;
+}
+.button-primary {
+  @apply bg-primary text-secondary;
+}
+
+.button-secondary {
+  @apply bg-secondary text-textColor;
+}
+/* Extra small button styles */
+
+.button-xs {
+  @apply px-3 py-2 text-xs;
+}
+
+/* Small Button */
+.button-sm {
+  @apply px-3 py-2 text-sm;
+}
+
+/* Large Button */
+.button-lg {
+  @apply px-5 py-3 text-base;
+}
+
+/* Extra Large Button */
+.button-xl {
+  @apply px-6 py-3.5 text-base;
+}

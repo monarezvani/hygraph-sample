@@ -25,6 +25,15 @@ const config: Config = {
         extrabold: "700",
         black: "900",
       },
+      fontFamily: {
+        sans: ["var(--font-inter)"],
+      },
+      boxShadow: {
+        xs: "0px 1px 2px 0px rgba(16, 24, 40, 0.05)",
+      },
+      borderRadius: {
+        "s-lg": "8px", // Assuming 's-lg' is shorthand for 'super large'
+      },
     },
   },
   plugins: [],

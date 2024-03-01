@@ -1,60 +1,7 @@
+@import "../assets/button.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-.button {
-  @apply px-5 py-2.5 text-sm font-medium text-white rounded-lg text-center focus:ring-4 focus:outline-none focus:ring-blue-300;
-}
-/* Extra small button styles */
-
-.button-xs {
-  @apply px-3 py-2 text-xs;
-}
-
-/* Small Button */
-.button-sm {
-  @apply px-3 py-2 text-sm;
-}
-
-/* Large Button */
-.button-lg {
-  @apply px-5 py-3 text-base;
-}
-
-/* Extra Large Button */
-.button-xl {
-  @apply px-6 py-3.5 text-base;
-}
-
 .component {
   @apply py-8 px-4 w-screen;
 }
-/* :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-} */
