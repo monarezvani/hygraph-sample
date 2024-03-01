@@ -17,7 +17,6 @@ const FeatureSection = ({ featureSections }: FeatureSectionProps) => {
     <div className="flex flex-wrap">
       {featureSections.map((section, index) => {
         const image = section?.subBlocks?.featureSectionMedia?.image;
-
         return (
           <div
             key={index}

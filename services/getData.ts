@@ -1,18 +1,22 @@
 import React from "react";
 import { GET_DATA_QUERY } from "./queries";
-import { createApolloClient } from "./createApolloClient";
+import { getClient } from "./createApolloClient";
 import { revalidatePath } from "next/cache";
 import { Data, GetDataModel } from "@/model/GetDataModel";
 
 export async function getData() {
-  const client = createApolloClient();
-  const { data, loading, error } = await client.query<Data>({
+  const { data, loading, error } = await getClient().query<Data>({
     query: GET_DATA_QUERY,
+    context: {
+      fetchOptions: {
+        next: { revalidate: 60 },
+      },
+    },
   });
 
-  if (data) {
-    revalidatePath("/");
-  }
+  // if (data) {
+  //   revalidatePath("/");
+  // }
   if (loading) {
     return { data: null, loading: true, error: null };
   }

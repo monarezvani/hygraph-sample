@@ -8,50 +8,54 @@ export interface Data {
 
 export interface PageModel {
   subModels: SubModel[];
-  id: string;
+  id:        string;
 }
 
 export interface SubModel {
   subSections: SubSection[];
-  id: string;
+  id:          string;
 }
 
 export interface SubSection {
   subBlocks: SubBlocks;
-  id: string;
+  id:        string;
 }
 
 export interface SubBlocks {
-  id: string;
-  heroActionButtons?: ActionButton[];
-  heroDescription?: string;
-  heroTitle?: string;
-  featureSectionTitle?: string;
-  featureSectionMedia?: FeatureSectionMedia;
-  featureSectionLabel?: string;
+  id:                          string;
+  heroActionButtons?:          HeroActionButton[];
+  heroDescription?:            string;
+  heroTitle?:                  string;
+  featureSectionTitle?:        string;
+  featureSectionMedia?:        FeatureSectionMedia;
+  featureSectionLabel?:        string;
   featureSectionActionButton?: ActionButton | null;
-  featureSectionDescription?: string;
-  calloutTitle?: string;
-  calloutDescription?: string;
-  calloutActionButton?: ActionButton;
+  featureSectionDescription?:  string;
+  calloutTitle?:               string;
+  calloutDescription?:         string;
+  calloutActionButton?:        ActionButton;
 }
 
 export interface ActionButton {
-  buttonUrl: string;
+  buttonUrl:  string;
   buttonText: string;
-  id: string;
 }
 
 export interface FeatureSectionMedia {
-  id: string;
+  id:    string;
   image: Image;
-  youtubeVideoEmbed: string;
 }
 
 export interface Image {
-  url: string;
-  height: number;
-  width: number;
-  id: string;
+  url:      string;
+  height:   number;
+  width:    number;
+  id:       string;
   fileName: string;
+}
+
+export interface HeroActionButton {
+  id:         string;
+  buttonText: string;
+  buttonUrl:  string;
 }

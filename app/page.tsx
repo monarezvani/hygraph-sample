@@ -1,12 +1,13 @@
 import Callout from "@/components/Callout";
 import FeatureSection from "@/components/FeatureSection";
 import Hero from "@/components/Hero";
+import { MODEL_ID } from "@/config/Variables";
 import { getData } from "@/services/getData";
 
 export default async function Home() {
   const loadedData = await getData();
-  const subModels = loadedData.data?.pageModel.subModels;
 
+  const subModels = loadedData.data?.pageModel.subModels;
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <ul>
@@ -23,25 +24,7 @@ export default async function Home() {
                     />
                   )}
                   {subSection.subBlocks.featureSectionTitle && (
-                    <FeatureSection
-                      // featureSectionTitle={
-                      //   subSection.subBlocks.featureSectionTitle
-                      // }
-                      // featureSectionDescription={
-                      //   subSection.subBlocks.featureSectionDescription
-                      // }
-                      // featureSectionActionButton={
-                      //   subSection.subBlocks.featureSectionActionButton
-                      // }
-                      // featureSectionLabel={
-                      //   subSection.subBlocks.featureSectionLabel
-                      // }
-                      // index={index}
-                      // featureSectionMedia={
-                      //   subSection.subBlocks.featureSectionMedia
-                      // }
-                      featureSections={subModel.subSections}
-                    />
+                    <FeatureSection featureSections={subModel.subSections} />
                   )}
                   {subSection.subBlocks.calloutTitle && (
                     <Callout

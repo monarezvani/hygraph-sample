@@ -20,15 +20,17 @@ export const GET_DATA_QUERY = gql`
                     url
                     height
                     width
+                    id
+                    fileName
                   }
                 }
               }
               featureSectionLabel
               featureSectionActionButton {
                 buttonUrl
-                id
                 buttonText
               }
+              featureSectionDescription
             }
             ... on Callout {
               id
@@ -37,7 +39,6 @@ export const GET_DATA_QUERY = gql`
               calloutActionButton {
                 buttonUrl
                 buttonText
-                id
               }
             }
             ... on Hero {
