@@ -1,6 +1,7 @@
 .button {
-  @apply px-5 py-2.5 rounded-lg font-semibold;
+  @apply px-5 py-2.5 rounded-lg font-semibold shadow-button;
 }
+
 .button-primary {
   @apply bg-primary text-secondary;
 }

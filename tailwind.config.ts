@@ -16,6 +16,9 @@ const config: Config = {
         headerColor: "#0F172A",
         calloutBackground: "#1E293B",
       },
+      boxShadow: {
+        button: "0px 1px 2px 0px rgba(16, 24, 40, 0.05)",
+      },
       fontWeight: {
         thin: "100",
         light: "300",
@@ -28,11 +31,11 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--font-inter)"],
       },
-      boxShadow: {
-        xs: "0px 1px 2px 0px rgba(16, 24, 40, 0.05)",
-      },
-      borderRadius: {
-        "s-lg": "8px", // Assuming 's-lg' is shorthand for 'super large'
+      fontSize: {
+        sm: "18px",
+        base: "20px",
+        lg: "30px",
+        xl: "60px",
       },
     },
   },
