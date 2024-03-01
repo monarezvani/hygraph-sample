@@ -7,20 +7,14 @@ export const GET_DATA_QUERY = gql`
         subSections {
           subBlocks {
             ... on FeatureSection {
-              id
               featureSectionTitle
               featureSectionMedia {
                 ... on YouTubeVideo {
-                  id
                   youtubeVideoEmbed
                 }
                 ... on StaticImage {
-                  id
                   image {
                     url
-                    height
-                    width
-                    id
                     fileName
                   }
                 }
@@ -31,6 +25,7 @@ export const GET_DATA_QUERY = gql`
                 buttonText
               }
               featureSectionDescription
+              id
             }
             ... on Callout {
               id

@@ -2,7 +2,7 @@ import React from "react";
 import { ApolloClient, InMemoryCache } from "@apollo/client";
 
 import { NextApiRequest, NextApiResponse } from "next";
-import { BASE_ENDPOINT } from "@/config/endpoints";
+import { BASE_ENDPOINT } from "@/config/Endpoints";
 
 import { HttpLink } from "@apollo/client";
 import {

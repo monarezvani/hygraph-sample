@@ -39,12 +39,29 @@ const FeatureSection = ({
           lg:w-1/2`}
         >
           {featureSectionMedia.image && (
-            <Image
-              src={featureSectionMedia.image.url}
-              alt={featureSectionMedia.image.fileName}
-              width={480}
-              height={320}
-            />
+            <div
+              style={{ position: "relative", width: "480px", height: "360px" }}
+            >
+              <Image
+                src={featureSectionMedia.image.url}
+                alt={featureSectionMedia.image.fileName}
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
+            </div>
+          )}
+          {featureSectionMedia.youtubeVideoEmbed && (
+            <div
+              style={{ position: "relative", width: "480px", height: "360px" }}
+            >
+              <p
+                className=""
+                dangerouslySetInnerHTML={{
+                  __html: featureSectionMedia.youtubeVideoEmbed,
+                }}
+              />
+            </div>
           )}
         </div>
       )}
