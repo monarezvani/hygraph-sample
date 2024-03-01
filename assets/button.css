@@ -1,5 +1,5 @@
 .button {
-  @apply px-5 py-2.5 rounded-lg font-semibold shadow-button;
+  @apply px-5 py-3 rounded-lg font-semibold shadow-button;
 }
 
 .button-primary {

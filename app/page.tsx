@@ -9,7 +9,7 @@ export default async function Home() {
 
   const subModels = loadedData.data?.pageModel.subModels;
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-col items-center justify-between">
       <ul>
         <div>
           {subModels?.map((subModel) => (

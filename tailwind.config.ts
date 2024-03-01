@@ -37,6 +37,15 @@ const config: Config = {
         lg: "30px",
         xl: "60px",
       },
+      lineHeight: {
+        "28": "28px",
+        "38": "38px",
+        "30": "30px",
+        "72": "72px",
+      },
+      letterSpacing: {
+        title: "-1.2px",
+      },
     },
   },
   plugins: [],

@@ -2,6 +2,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.section {
+  @apply p-24 w-fit;
+}
 .component {
   @apply py-8 px-4 w-screen;
 }

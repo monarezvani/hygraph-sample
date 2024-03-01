@@ -15,19 +15,30 @@ export const Hero = ({
 }: HeroSectionProps) => {
   console.log(heroTitle);
   return (
-    <section className="component">
-      <h1>{heroTitle}</h1>
-      <p>{heroDescription}</p>
-      {heroActionButtons &&
-        heroActionButtons.map((button) => (
-          <Link
-            key={button.id}
-            href={button.buttonUrl}
-            className="button xs:button-xs s:button-sm md:button-md xl:button-xl lg:button-lg button-primary "
-          >
-            {button.buttonText}
-          </Link>
-        ))}
+    <section className="section">
+      <div className="flex  flex-col items-center content-stretch component">
+        <div className="mb-12">
+          <p className="font-bold text-xl text-textColor leading-72 tracking-title text-center mb-8">
+            {heroTitle}
+          </p>
+          <p className="text-center text-base font-normal leading-30 text-textColor">
+            {" "}
+            {heroDescription}
+          </p>
+        </div>
+        <div>
+          {heroActionButtons &&
+            heroActionButtons.map((button) => (
+              <Link
+                key={button.id}
+                href={button.buttonUrl}
+                className="button xs:button-xs s:button-sm md:button-md xl:button-xl lg:button-lg button-primary "
+              >
+                {button.buttonText}
+              </Link>
+            ))}
+        </div>
+      </div>
     </section>
   );
 };
