@@ -14,7 +14,7 @@ const config: Config = {
         textColor: "#334155",
         accentColor: "#7C3AED",
         headerColor: "#0F172A",
-        calloutBackground: "#1E293B",
+        calloutBg: "#1E293B",
       },
       boxShadow: {
         button: "0px 1px 2px 0px rgba(16, 24, 40, 0.05)",
