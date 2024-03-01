@@ -2,6 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+.button {
+  @apply px-5 py-2.5 text-sm font-medium text-white rounded-lg text-center focus:ring-4 focus:outline-none focus:ring-blue-300;
+}
+/* Extra small button styles */
+
+.button-xs {
+  @apply px-3 py-2 text-xs;
+}
+
+/* Small Button */
+.button-sm {
+  @apply px-3 py-2 text-sm;
+}
+
+/* Large Button */
+.button-lg {
+  @apply px-5 py-3 text-base;
+}
+
+/* Extra Large Button */
+.button-xl {
+  @apply px-6 py-3.5 text-base;
+}
+
+.component {
+  @apply py-8 px-4 w-screen;
+}
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
