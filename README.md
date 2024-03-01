@@ -2,7 +2,6 @@
 
 This project utilizes Next.js for server-side rendering (SSR) to accommodate frequent data changes within a Content Management System (CMS) and is based on the necessity for immediate data freshness and SEO considerations.
 
-
 # @apollo/client vs. graphql-request
 
 The project opts for @apollo/client over graphql-request. This decision is influenced by the active maintenance and frequent updates of @apollo/client, ensuring compatibility with the latest features and best practices. As of the last update, @apollo/client provides a more reliable and up-to-date solution.
@@ -23,5 +22,5 @@ To get started with the project:
 # Additional Resources
 
 Next.js Documentation for in-depth guides and tutorials: https://nextjs.org/docs
-Apollo Client Documentation for integrating GraphQL with Next.js using @apollo/client: https://www.apollographql.com/docs/react/api/react/ssr
+Apollo Client Documentation for integrating GraphQL with Next.js using @apollo/client:https://www.apollographql.com/blog/how-to-use-apollo-client-with-next-js-13
 CMS Documentation for setting up model and understanding data management options: https://hygraph.com/docs
