@@ -18,11 +18,10 @@ export const Hero = ({
     <section className="section">
       <div className="flex  flex-col items-center content-stretch component">
         <div className="mb-12">
-          <p className="font-bold text-xl text-textColor leading-72 tracking-title text-center mb-8">
+          <p className="font-bold text-xl text-headerColor leading-72 tracking-title text-center mb-8">
             {heroTitle}
           </p>
           <p className="text-center text-base font-normal leading-30 text-textColor">
-            {" "}
             {heroDescription}
           </p>
         </div>

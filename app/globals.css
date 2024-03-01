@@ -4,8 +4,8 @@
 @tailwind utilities;
 
 .section {
-  @apply p-24 w-fit;
+  @apply p-24 w-full;
 }
 .component {
-  @apply py-8 px-4 w-screen;
+  @apply py-8 px-4;
 }

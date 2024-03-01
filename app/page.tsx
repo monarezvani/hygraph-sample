@@ -3,6 +3,8 @@ import FeatureSection from "@/components/FeatureSection";
 import Hero from "@/components/Hero";
 import { MODEL_ID } from "@/config/Variables";
 import { getData } from "@/services/getData";
+import Image from "next/image";
+import { Fragment } from "react";
 
 export default async function Home() {
   const loadedData = await getData();
@@ -11,11 +13,11 @@ export default async function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
       <ul>
-        <div>
+        <Fragment>
           {subModels?.map((subModel) => (
-            <div key={subModel.id}>
+            <Fragment key={subModel.id}>
               {subModel.subSections.map((subSection, index) => (
-                <div key={subSection.id}>
+                <Fragment key={subSection.id}>
                   {subSection.subBlocks.heroTitle && (
                     <Hero
                       heroTitle={subSection.subBlocks.heroTitle}
@@ -23,8 +25,26 @@ export default async function Home() {
                       heroActionButtons={subSection.subBlocks.heroActionButtons}
                     />
                   )}
+
                   {subSection.subBlocks.featureSectionTitle && (
-                    <FeatureSection featureSections={subModel.subSections} />
+                    <FeatureSection
+                      featureSectionMedia={
+                        subSection.subBlocks.featureSectionMedia
+                      }
+                      featureSectionTitle={
+                        subSection.subBlocks.featureSectionTitle
+                      }
+                      featureSectionActionButton={
+                        subSection.subBlocks.featureSectionActionButton
+                      }
+                      featureSectionDescription={
+                        subSection.subBlocks.featureSectionDescription
+                      }
+                      featureSectionLabel={
+                        subSection.subBlocks.featureSectionLabel
+                      }
+                      index={index}
+                    />
                   )}
                   {subSection.subBlocks.calloutTitle && (
                     <Callout
@@ -37,11 +57,11 @@ export default async function Home() {
                       }
                     />
                   )}
-                </div>
+                </Fragment>
               ))}
-            </div>
+            </Fragment>
           ))}
-        </div>
+        </Fragment>
       </ul>
     </main>
   );
