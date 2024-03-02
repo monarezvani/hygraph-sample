@@ -25,8 +25,8 @@ const Callout = ({
       <div>
         {calloutActionButton && (
           <Link
-            className="button button-primary "
             href={calloutActionButton.buttonUrl}
+            className="button button-primary  max-[640px]:button-sm  max-[768px]:button-md max-[1280px]:button-xl max-[1536px]:button-lg button-primary "
           >
             {calloutActionButton.buttonText}
           </Link>

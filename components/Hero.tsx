@@ -13,7 +13,6 @@ export const Hero = ({
   heroDescription,
   heroActionButtons,
 }: HeroSectionProps) => {
-  console.log(heroTitle);
   return (
     <section className="section">
       <div className="flex  flex-col items-center content-stretch component">
@@ -31,7 +30,7 @@ export const Hero = ({
               <Link
                 key={button.id}
                 href={button.buttonUrl}
-                className="button xs:button-xs s:button-sm md:button-md xl:button-xl lg:button-lg button-primary "
+                className="button max-[640px]:button-sm  max-[768px]:button-md max-[1280px]:button-xl max-[1536px]:button-lg button-primary "
               >
                 {button.buttonText}
               </Link>

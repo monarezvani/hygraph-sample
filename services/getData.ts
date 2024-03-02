@@ -1,11 +1,8 @@
-import React from "react";
 import { GET_DATA_QUERY } from "./queries";
-import { getClient } from "./createApolloClient";
-import { revalidatePath } from "next/cache";
-import { Data, GetDataModel } from "@/model/GetDataModel";
-
+import { client } from "./createApolloClient";
+import { DataModel } from "@/model/GetDataModel";
 export async function getData() {
-  const { data, loading, error } = await getClient().query<Data>({
+  const { data, loading, error } = await client.query<DataModel>({
     query: GET_DATA_QUERY,
     context: {
       fetchOptions: {
@@ -14,9 +11,6 @@ export async function getData() {
     },
   });
 
-  // if (data) {
-  //   revalidatePath("/");
-  // }
   if (loading) {
     return { data: null, loading: true, error: null };
   }

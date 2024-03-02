@@ -8,6 +8,7 @@ import {
 } from "@/model/GetDataModel";
 import Image from "next/image";
 import Link from "next/link";
+import { YoutubeVideoEmbed } from "./YoutubeVideoEmbed";
 interface FeatureSectionProps {
   featureSectionTitle?: string;
   featureSectionMedia?: FeatureSectionMedia;
@@ -25,7 +26,6 @@ const FeatureSection = ({
   featureSectionDescription,
   index,
 }: FeatureSectionProps) => {
-  console.log(featureSectionActionButton);
   return (
     <section
       className="flex flex-col lg:flex-row w-full mb-8 section content-center items-center lg:gap-24"
@@ -38,10 +38,10 @@ const FeatureSection = ({
           
           lg:w-1/2`}
         >
-          {featureSectionMedia.image && (
-            <div
-              style={{ position: "relative", width: "480px", height: "360px" }}
-            >
+          <div
+            style={{ position: "relative", width: "480px", height: "360px" }}
+          >
+            {featureSectionMedia.image && (
               <Image
                 src={featureSectionMedia.image.url}
                 alt={featureSectionMedia.image.fileName}
@@ -49,20 +49,13 @@ const FeatureSection = ({
                 priority
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
-            </div>
-          )}
-          {featureSectionMedia.youtubeVideoEmbed && (
-            <div
-              style={{ position: "relative", width: "480px", height: "360px" }}
-            >
-              <p
-                className=""
-                dangerouslySetInnerHTML={{
-                  __html: featureSectionMedia.youtubeVideoEmbed,
-                }}
+            )}
+            {featureSectionMedia.youtubeVideoEmbed && (
+              <YoutubeVideoEmbed
+                youtubeVideoEmbed={featureSectionMedia.youtubeVideoEmbed}
               />
-            </div>
-          )}
+            )}
+          </div>
         </div>
       )}
       <div className="flex flex-col lg:w-1/2">
@@ -77,7 +70,7 @@ const FeatureSection = ({
         </span>
         {featureSectionActionButton && (
           <Link
-            className="button button-lg xs:button-xs s:button-sm md:button-md xl:button-xl lg:button-lg button-primary mt-8 "
+            className="button max-[640px]:button-sm  max-[768px]:button-md max-[1280px]:button-xl max-[1536px]:button-lg button-primary mt-8 w-fit"
             href={featureSectionActionButton.buttonUrl}
           >
             {featureSectionActionButton.buttonText}

@@ -1,8 +1,8 @@
 export interface GetDataModel {
-  data: Data;
+  data: DataModel;
 }
 
-export interface Data {
+export interface DataModel {
   pageModel: PageModel;
 }
 
