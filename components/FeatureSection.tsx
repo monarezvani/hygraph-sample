@@ -37,8 +37,7 @@ const FeatureSection = ({
                 <Image
                   src={featureSectionMedia.image.url}
                   alt={featureSectionMedia.image.fileName}
-                  // objectFit=""
-                  // style={{fill:c}}
+                  style={{ objectFit: "contain" }}
                   sizes="(max-width: 680px) 100%, (max-width: 1200px) 50vw, 33vw"
                   fill
                   className="lg:px-0 px-8"
