@@ -6,6 +6,8 @@ import { Navbar } from "@/components/Navbar";
 import { getData } from "@/services/getData";
 import { Fragment } from "react";
 
+export const revalidate = 60;
+
 export default async function Home() {
   const loadedData = await getData();
 

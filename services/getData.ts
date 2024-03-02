@@ -1,8 +1,8 @@
 import { GET_DATA_QUERY } from "./queries";
-import { client } from "./createApolloClient";
+import { getClient } from "./createApolloClient";
 import { DataModel } from "@/model/GetDataModel";
 export async function getData() {
-  const { data, loading, error } = await client.query<DataModel>({
+  const { data, loading, error } = await getClient().query<DataModel>({
     query: GET_DATA_QUERY,
     context: {
       fetchOptions: {
@@ -10,7 +10,7 @@ export async function getData() {
       },
     },
   });
-
+  console.log(data);
   if (loading) {
     return { data: null, loading: true, error: null };
   }
