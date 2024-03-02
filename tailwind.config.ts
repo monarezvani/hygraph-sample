@@ -32,6 +32,7 @@ const config: Config = {
         sans: ["var(--font-inter)"],
       },
       fontSize: {
+        xs: "16px",
         sm: "18px",
         base: "20px",
         lg: "30px",
