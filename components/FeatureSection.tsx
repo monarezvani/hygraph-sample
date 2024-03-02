@@ -21,10 +21,10 @@ const FeatureSection = ({
 }: FeatureSectionProps) => {
   return (
     <section
-      className=" w-full mb-8 section content-center items-center lg:gap-24 xs:gap-16"
+      className="section-mobile lg:section mb-8 section-center items-center gap-16 lg:gap-24  "
       key={index}
     >
-      <div className="content flex flex-col lg:flex-row content-center items-center md:gap-3">
+      <div className="content-mobile lg:content flex flex-col lg:flex-row content-center items-center md:gap-3 ">
         {featureSectionMedia && (
           <div
             className={`flex justify-center
@@ -32,16 +32,17 @@ const FeatureSection = ({
           
           lg:w-1/2`}
           >
-            <div
-              style={{ position: "relative", width: "480px", height: "360px" }}
-            >
+            <div className=" w-screen relative lg:px-0 px-8 h-[180px] lg:h-[400px]">
               {featureSectionMedia.image && (
                 <Image
                   src={featureSectionMedia.image.url}
                   alt={featureSectionMedia.image.fileName}
+                  // objectFit=""
+                  // style={{fill:c}}
+                  sizes="(max-width: 680px) 100%, (max-width: 1200px) 50vw, 33vw"
                   fill
-                  priority
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="lg:px-0 px-8"
+                  loading="lazy"
                 />
               )}
               {featureSectionMedia.youtubeVideoEmbed && (
@@ -59,12 +60,12 @@ const FeatureSection = ({
           <span className="text-headerColor text-lg font-bold text-lg leading-38 mb-4">
             {featureSectionTitle}
           </span>
-          <span className="text-textColor text-sm font-normal leading-28">
+          <span className="text-left text-textColor text-sm font-normal leading-28">
             {featureSectionDescription}
           </span>
           {featureSectionActionButton && (
             <Link
-              className="button max-[640px]:button-sm  max-[768px]:button-md max-[1280px]:button-xl max-[1536px]:button-lg button-primary mt-8 w-fit"
+              className="button-primary button-md w-full md:w-fit"
               href={featureSectionActionButton.buttonUrl}
             >
               {featureSectionActionButton.buttonText}

@@ -12,28 +12,28 @@ const Callout = ({
   calloutDescription,
   calloutActionButtons,
 }: CalloutProps) => (
-  <section className="section">
-    <div className="content">
-      <div className="bg-calloutBg rounded-2xl p-16 text-secondary flex justify-between flex-col lg:flex-row ">
+  <section className=" section-mobile lg:section">
+    <div className="content-mobile lg:content ">
+      <div className="bg-calloutBg rounded-2xl p-8 lg:p-16 text-secondary flex justify-between flex-col lg:flex-row ">
         <div className="flex flex-col">
           <span className="text-lg font-bold leading-38 text-secondary">
             {calloutTitle}
           </span>
-          <span className="text-base font-normal text-secondary mt-4 leading-30">
+          <span className="text-left lg:text-center text-base font-normal text-secondary mt-4 leading-30">
             {calloutDescription}
           </span>
         </div>
 
-        <div className="flex flex-col">
+        <div className="flex flex-col justify-center mt-8 lg:mt-0">
           {calloutActionButtons &&
             calloutActionButtons.map((button, index) => (
               <Link
                 key={button.id}
                 href={button.buttonUrl}
                 className={`
-                max-[640px]:button-sm max-[768px]:button-md max-[1280px]:button-xl max-[1536px]:button-lg
+                  button-primary button-md w-full md:w-fit mb-3
                       ${index % 2 === 0 ? "button-secondary" : "button-primary"}
-                 button  mb-3
+                   
                 `}
               >
                 {button.buttonText}

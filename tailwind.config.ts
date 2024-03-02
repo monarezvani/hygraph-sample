@@ -16,6 +16,7 @@ const config: Config = {
         headerColor: "#0F172A",
         calloutBg: "#1E293B",
         footerColor: "#64748B",
+        borderColor: "#E4E7EC",
       },
       boxShadow: {
         button: "0px 1px 2px 0px rgba(16, 24, 40, 0.05)",
@@ -37,6 +38,7 @@ const config: Config = {
         sm: "18px",
         base: "20px",
         lg: "30px",
+        semiLg: "36px",
         xl: "60px",
       },
       lineHeight: {

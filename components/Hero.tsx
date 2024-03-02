@@ -1,5 +1,6 @@
 import { ActionButton } from "@/model/GetDataModel";
 import Link from "next/link";
+import { Fragment } from "react";
 
 interface HeroSectionProps {
   heroActionButton?: ActionButton;
@@ -12,26 +13,26 @@ export const Hero = ({
   heroActionButton,
 }: HeroSectionProps) => {
   return (
-    <section className="md:section xs:section-mobile ">
-      <div className=" content flex  flex-col items-center content-stretch content">
+    <section className="section-mobile lg:section ">
+      <div className=" content-mobile lg:content  flex flex-col items-center content-stretch content">
         <div className="mb-12">
-          <p className="font-bold text-xl text-headerColor leading-72 tracking-title text-center mb-8">
+          <p className="font-bold text-semiLg md:text-xl text-headerColor leading-44 md:leading-72 tracking-title text-center mb-8 w-fit">
             {heroTitle}
           </p>
           <p className="text-center text-base font-normal leading-30 text-textColor">
             {heroDescription}
           </p>
         </div>
-        <div>
+        <Fragment>
           {heroActionButton && (
             <Link
               href={heroActionButton.buttonUrl}
-              className="button button-primary  max-[640px]:button-sm  max-[768px]:button-md max-[1280px]:button-xl max-[1536px]:button-lg button-primary "
+              className=" button-primary button-lg w-full md:w-fit"
             >
               {heroActionButton.buttonText}
             </Link>
           )}
-        </div>
+        </Fragment>
       </div>
     </section>
   );
