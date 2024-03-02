@@ -19,6 +19,8 @@ const FeatureSection = ({
   featureSectionDescription,
   index,
 }: FeatureSectionProps) => {
+  console.log(featureSectionMedia?.image?.fileName.split(".").shift());
+
   return (
     <section
       className="section-mobile lg:section mb-8 section-center items-center gap-16 lg:gap-24  "
@@ -36,7 +38,7 @@ const FeatureSection = ({
               {featureSectionMedia.image && (
                 <Image
                   src={featureSectionMedia.image.url}
-                  alt={featureSectionMedia.image.fileName}
+                  alt={featureSectionMedia.image.fileName.split(".")[0] + index}
                   style={{ objectFit: "contain" }}
                   sizes="(max-width: 680px) 100%, (max-width: 1200px) 50vw, 33vw"
                   fill
@@ -56,9 +58,9 @@ const FeatureSection = ({
           <span className="capitalize font-extrabold text-primary text-sm">
             {featureSectionLabel}
           </span>
-          <span className="text-headerColor text-lg font-bold text-lg leading-38 mb-4">
+          <h2 className="text-headerColor text-lg font-bold text-lg leading-38 mb-4">
             {featureSectionTitle}
-          </span>
+          </h2>
           <span className="text-left text-textColor text-sm font-normal leading-28">
             {featureSectionDescription}
           </span>
