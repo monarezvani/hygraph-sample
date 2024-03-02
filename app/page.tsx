@@ -24,9 +24,7 @@ export default async function Home() {
                       <Hero
                         heroTitle={subSection.subBlocks.heroTitle}
                         heroDescription={subSection.subBlocks.heroDescription}
-                        heroActionButtons={
-                          subSection.subBlocks.heroActionButtons
-                        }
+                        heroActionButton={subSection.subBlocks.heroActionButton}
                       />
                     )}
 
@@ -56,8 +54,8 @@ export default async function Home() {
                         calloutDescription={
                           subSection.subBlocks.calloutDescription
                         }
-                        calloutActionButton={
-                          subSection.subBlocks.calloutActionButton
+                        calloutActionButtons={
+                          subSection.subBlocks.calloutActionButtons
                         }
                       />
                     )}

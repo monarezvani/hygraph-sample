@@ -22,10 +22,10 @@ export interface SubSection {
 }
 
 export interface SubBlocks {
-  id: string;
-  heroActionButtons?: HeroActionButton[];
+  id?: string;
   heroDescription?: string;
   heroTitle?: string;
+  heroActionButton?: ActionButton;
   featureSectionTitle?: string;
   featureSectionMedia?: FeatureSectionMedia;
   featureSectionLabel?: string;
@@ -33,7 +33,13 @@ export interface SubBlocks {
   featureSectionDescription?: string;
   calloutTitle?: string;
   calloutDescription?: string;
-  calloutActionButton?: ActionButton;
+  calloutActionButtons?: CalloutActionButton[];
+}
+
+export interface CalloutActionButton {
+  buttonUrl: string;
+  buttonText: string;
+  id: string;
 }
 
 export interface ActionButton {
@@ -49,10 +55,4 @@ export interface FeatureSectionMedia {
 export interface Image {
   url: string;
   fileName: string;
-}
-
-export interface HeroActionButton {
-  id: string;
-  buttonText: string;
-  buttonUrl: string;
 }

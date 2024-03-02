@@ -2,10 +2,8 @@ import { navItems } from "@/config/Constants";
 import LogoImg from "@/public/images/Logo.svg";
 import Image from "next/image";
 import Link from "next/link";
-import { Fragment } from "react";
 export const Navbar = () => {
   return (
-    
     <nav className="h-20 px-8">
       <div className="content flex flex-row justify-between items-center">
         <div className="flex flex-row">
@@ -38,7 +36,7 @@ export const Navbar = () => {
             Login
           </Link>
           <Link
-            className=" mx-8 button max-[640px]:button-sm max-[768px]:button-md max-[1280px]:button-xl max-[1536px]:button-lg button-primary "
+            className="mx-8 button max-[640px]:button-sm max-[768px]:button-md max-[1280px]:button-xl max-[1536px]:button-lg button-primary"
             href="/signUp"
           >
             Sign up

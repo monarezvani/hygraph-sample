@@ -1,20 +1,20 @@
 "use client";
-import { ActionButton } from "@/model/GetDataModel";
+import { ActionButton, CalloutActionButton } from "@/model/GetDataModel";
 import Link from "next/link";
 interface CalloutProps {
   calloutDescription?: string;
   calloutTitle?: string;
-  calloutActionButton?: ActionButton;
+  calloutActionButtons?: CalloutActionButton[];
 }
 
 const Callout = ({
   calloutTitle,
   calloutDescription,
-  calloutActionButton,
+  calloutActionButtons,
 }: CalloutProps) => (
-  <section className="section ">
+  <section className="section">
     <div className="content">
-      <div className="bg-calloutBg rounded-2xl p-16 text-secondary flex justify-between">
+      <div className="bg-calloutBg rounded-2xl p-16 text-secondary flex justify-between flex-col lg:flex-row ">
         <div className="flex flex-col">
           <span className="text-lg font-bold leading-38 text-secondary">
             {calloutTitle}
@@ -23,15 +23,22 @@ const Callout = ({
             {calloutDescription}
           </span>
         </div>
-        <div>
-          {calloutActionButton && (
-            <Link
-              href={calloutActionButton.buttonUrl}
-              className="button button-primary  max-[640px]:button-sm  max-[768px]:button-md max-[1280px]:button-xl max-[1536px]:button-lg button-primary "
-            >
-              {calloutActionButton.buttonText}
-            </Link>
-          )}
+
+        <div className="flex flex-col">
+          {calloutActionButtons &&
+            calloutActionButtons.map((button, index) => (
+              <Link
+                key={button.id}
+                href={button.buttonUrl}
+                className={`
+                max-[640px]:button-sm max-[768px]:button-md max-[1280px]:button-xl max-[1536px]:button-lg
+                      ${index % 2 === 0 ? "button-secondary" : "button-primary"}
+                 button  mb-3
+                `}
+              >
+                {button.buttonText}
+              </Link>
+            ))}
         </div>
       </div>
     </div>

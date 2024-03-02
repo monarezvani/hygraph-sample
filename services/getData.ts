@@ -6,7 +6,7 @@ export async function getData() {
     query: GET_DATA_QUERY,
     context: {
       fetchOptions: {
-        next: { revalidate: 1600 },
+        next: { revalidate: 60 },
       },
     },
   });
