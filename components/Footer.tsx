@@ -5,7 +5,7 @@ export const Footer = () => {
     <section className="section">
       <div className="content">
         <footer className=" h-20">
-          <div className="content flex flex-row justify-between items-center">
+          <div className="content flex flex-col lg:flex-row justify-between items-center">
             <div>
               <span className="text-footerColor">
                 © 2023 Acme Co. All rights reserved.

@@ -24,7 +24,7 @@ const FeatureSection = ({
       className=" w-full mb-8 section content-center items-center lg:gap-24 xs:gap-16"
       key={index}
     >
-      <div className="content flex flex-row flex-col lg:flex-row content-center items-center md:gap-3">
+      <div className="content flex flex-col lg:flex-row content-center items-center md:gap-3">
         {featureSectionMedia && (
           <div
             className={`flex justify-center

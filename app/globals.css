@@ -9,7 +9,9 @@
 .content {
   @apply py-8 px-3;
 }
-
+.section-mobile {
+  @apply p-0 w-full;
+}
 @layer components {
   .button {
     @apply px-5 py-3 rounded-lg font-semibold shadow-button;
