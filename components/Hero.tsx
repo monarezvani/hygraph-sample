@@ -1,5 +1,3 @@
-"use client";
-
 import { HeroActionButton } from "@/model/GetDataModel";
 import Link from "next/link";
 

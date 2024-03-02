@@ -4,7 +4,7 @@ This project utilizes Next.js for server-side rendering (SSR) to accommodate fre
 
 # @apollo/client vs. graphql-request
 
-We've opted to utilize Apollo Client for GraphQL operations within this project due to its active maintenance, extensive feature set, and vibrant community support. Notably, Apollo Client's recent updates, occurring every few weeks, showcase its commitment to ongoing development and improvement. With a considerable number of stars and forks on GitHub (19.2k stars as of the last update), Apollo Client has garnered significant traction and community adoption. In contrast, graphql-request, while a viable option, has seen its last update approximately 9 months ago, with comparatively fewer stars and forks (5.6k stars ). This decision reflects our confidence in Apollo Client's reliability, comprehensive functionality, and the thriving ecosystem it offers for GraphQL integration
+I've opted to utilize Apollo Client for GraphQL operations within this project due to its active maintenance, extensive feature set, and vibrant community support. Notably, Apollo Client's recent updates, occurring every few weeks, showcase its commitment to ongoing development and improvement. With a considerable number of stars and forks on GitHub (19.2k stars as of the last update), Apollo Client has garnered significant traction and community adoption. In contrast, graphql-request, while a viable option, has seen its last update approximately 9 months ago, with comparatively fewer stars and forks (5.6k stars ). This decision reflects our confidence in Apollo Client's reliability, comprehensive functionality, and the thriving ecosystem it offers for GraphQL integration
 
 # Webhooks Integration
 

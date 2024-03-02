@@ -1,11 +1,4 @@
-"use client";
-
-import {
-  ActionButton,
-  FeatureSectionMedia,
-  SubBlocks,
-  SubSection,
-} from "@/model/GetDataModel";
+import { ActionButton, FeatureSectionMedia } from "@/model/GetDataModel";
 import Image from "next/image";
 import Link from "next/link";
 import { YoutubeVideoEmbed } from "./YoutubeVideoEmbed";
