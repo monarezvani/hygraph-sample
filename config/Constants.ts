@@ -13,3 +13,8 @@ export const navItems = [
   { id: 2, title: "Pricing", link: "/pricing" },
   { id: 3, title: "About", link: "/about" },
 ];
+export const footerItems = [
+  { id: 0, title: "Terms", link: "/terms" },
+  { id: 1, title: "Privacy", link: "/privacy" },
+  { id: 2, title: "Cookies", link: "/cookies" },
+];

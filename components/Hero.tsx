@@ -13,7 +13,7 @@ export const Hero = ({
 }: HeroSectionProps) => {
   return (
     <section className="section">
-      <div className="flex  flex-col items-center content-stretch component">
+      <div className=" content flex  flex-col items-center content-stretch content">
         <div className="mb-12">
           <p className="font-bold text-xl text-headerColor leading-72 tracking-title text-center mb-8">
             {heroTitle}

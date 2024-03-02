@@ -4,10 +4,10 @@
 @tailwind utilities;
 
 .section {
-  @apply p-24 w-full;
+  @apply py-24 px-16 w-full;
 }
-.component {
-  @apply py-8 px-4;
+.content {
+  @apply py-8 px-3;
 }
 
 @layer components {

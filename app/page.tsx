@@ -1,5 +1,6 @@
 import Callout from "@/components/Callout";
 import FeatureSection from "@/components/FeatureSection";
+import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import { Navbar } from "@/components/Navbar";
 import { getData } from "@/services/getData";
@@ -67,6 +68,7 @@ export default async function Home() {
           </Fragment>
         </ul>
       </main>
+      <Footer />
     </Fragment>
   );
 }
