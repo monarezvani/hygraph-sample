@@ -1,13 +1,8 @@
-import { Metadata } from "next";
-
+import type { Metadata } from "next";
 export const metadata: Metadata = {
-  title: {
-    default: "Cookies",
-    template: `%s | Explorer`,
-  },
+  title: "Cookies",
   description: "cookies",
 };
-export const Cookies = () => {
+export default function Cookies() {
   return <div>Cookies</div>;
-};
-export default Cookies;
+}

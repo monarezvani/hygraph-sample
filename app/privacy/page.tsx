@@ -1,13 +1,9 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: {
-    default: "Policy",
-    template: `%s | Explorer`,
-  },
+  title: "Policy",
   description: "Policy of website",
 };
-export const Privacy = () => {
+export default function Privacy() {
   return <div>Privacy</div>;
-};
-export default Privacy;
+}

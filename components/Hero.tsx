@@ -7,11 +7,11 @@ interface HeroSectionProps {
   heroTitle?: string;
   heroDescription?: string;
 }
-export const Hero = ({
+export default function Hero({
   heroTitle,
   heroDescription,
   heroActionButton,
-}: HeroSectionProps) => {
+}: HeroSectionProps) {
   return (
     <section className="section-mobile lg:section ">
       <div className=" content-mobile lg:content  flex flex-col items-center content-stretch content">
@@ -36,5 +36,4 @@ export const Hero = ({
       </div>
     </section>
   );
-};
-export default Hero;
+}

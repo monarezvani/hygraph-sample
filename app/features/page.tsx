@@ -1,14 +1,9 @@
-import { Metadata } from "next";
-
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: {
-    default: "Features",
-    template: `%s | Explorer`,
-  },
+  title: "Features",
   description: "Features of Hygraph CMS which boost performance of website",
 };
-export const Features = () => {
+export default function Features() {
   return <div>Features</div>;
-};
-export default Features;
+}

@@ -6,11 +6,9 @@ interface YoutubeVideoEmbedProps {
   youtubeVideoEmbed?: string;
 }
 
-export const YoutubeVideoEmbed = ({
+export default function YoutubeVideoEmbed({
   youtubeVideoEmbed,
-}: YoutubeVideoEmbedProps) => {
+}: YoutubeVideoEmbedProps) {
   const src = useExtractYoutubeVideoId(youtubeVideoEmbed);
   return <YouTubeEmbed videoid={src} />;
-};
-
-export default YoutubeVideoEmbed;
+}

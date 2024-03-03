@@ -2,9 +2,8 @@ import Callout from "@/components/Callout";
 import FeatureSection from "@/components/FeatureSection";
 import Footer from "@/layout/Footer";
 import Hero from "@/components/Hero";
-import { Navbar } from "@/layout/Navbar";
+import Navbar from "@/layout/Navbar";
 import { getData } from "@/services/getData";
-import { Metadata } from "next";
 import { Fragment } from "react";
 
 export const revalidate = 60;

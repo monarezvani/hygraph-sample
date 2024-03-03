@@ -5,7 +5,7 @@ import LogoImg from "@/public/images/Logo.svg";
 import Image from "next/image";
 import Link from "next/link";
 
-export const Navbar = () => {
+export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -38,6 +38,17 @@ export const Navbar = () => {
                 ))}
               </ul>
             </div>
+            <div className="hidden md:flex  flex justify-center items-center">
+              <Link
+                className="text-textColor font-semiBold text-xs mx-8"
+                href="/login"
+              >
+                Login
+              </Link>
+              <Link className="mx-8 button-primary button-sm " href="/signUp">
+                Sign&nbsp;up
+              </Link>
+            </div>
             <div className="md:hidden">
               <button
                 onClick={toggleMenu}
@@ -69,6 +80,4 @@ export const Navbar = () => {
       </div>
     </section>
   );
-};
-
-export default Navbar;
+}

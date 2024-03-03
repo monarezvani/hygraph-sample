@@ -1,6 +1,6 @@
 import { footerItems } from "@/config/Constants";
 import Link from "next/link";
-export const Footer = () => {
+export default function Footer() {
   return (
     <div className="content-mobile lg:content  border-t border-borderColor py-8 ">
       <footer>
@@ -25,5 +25,4 @@ export const Footer = () => {
       </footer>
     </div>
   );
-};
-export default Footer;
+}

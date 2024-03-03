@@ -1,7 +1,7 @@
 import { ActionButton, FeatureSectionMedia } from "@/model/GetDataModel";
 import Image from "next/image";
 import Link from "next/link";
-import { YoutubeVideoEmbed } from "./YoutubeVideoEmbed";
+import YoutubeVideoEmbed from "./YoutubeVideoEmbed";
 interface FeatureSectionProps {
   featureSectionTitle?: string;
   featureSectionMedia?: FeatureSectionMedia;
@@ -11,20 +11,20 @@ interface FeatureSectionProps {
   index: number;
 }
 
-const FeatureSection = ({
+export default function FeatureSection({
   featureSectionTitle,
   featureSectionMedia,
   featureSectionLabel,
   featureSectionActionButton,
   featureSectionDescription,
   index,
-}: FeatureSectionProps) => {
+}: FeatureSectionProps) {
   return (
     <section
-      className="section-mobile lg:section mb-8 section-center items-center gap-16 lg:gap-24  "
+      className="section-mobile lg:section mb-8 section-center items-center"
       key={index}
     >
-      <div className="content-mobile lg:content flex flex-col lg:flex-row content-center items-center md:gap-3 ">
+      <div className="content-mobile lg:content flex flex-col lg:flex-row content-center items-center gap-12 lg:gap-24 ">
         {featureSectionMedia && (
           <div
             className={`flex justify-center
@@ -35,12 +35,11 @@ const FeatureSection = ({
             <div className="w-screen relative h-[180px] lg:h-[400px]">
               {featureSectionMedia.image && (
                 <Image
+                  className="lg:px-0 px-8 object-cover lg:object-contain"
                   src={featureSectionMedia.image.url}
                   alt={featureSectionMedia.image.fileName.split(".")[0] + index}
-                  style={{ objectFit: "contain" }}
                   sizes="(max-width: 680px) 100%"
                   fill
-                  className="lg:px-0 px-8"
                   loading="lazy"
                 />
               )}
@@ -64,7 +63,7 @@ const FeatureSection = ({
           </span>
           {featureSectionActionButton && (
             <Link
-              className="button-primary button-md w-full md:w-fit"
+              className="button-primary button-md w-full md:w-fit mt-8"
               href={featureSectionActionButton.buttonUrl}
             >
               {featureSectionActionButton.buttonText}
@@ -74,6 +73,4 @@ const FeatureSection = ({
       </div>
     </section>
   );
-};
-
-export default FeatureSection;
+}

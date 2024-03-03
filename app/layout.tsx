@@ -3,10 +3,9 @@ import "./globals.css";
 import { interFont } from "@/config/Constants";
 
 export const metadata: Metadata = {
-  title: {
-    default: "Hygraph Sample",
-    template: `%s | Explorer`,
-  },
+  title: "Hygraph Sample",
+  //   template: `%s | Explorer`,
+  // },
   description:
     "A coding challenge including connecting website to a headless CMS and fetch data",
 };

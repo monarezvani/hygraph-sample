@@ -1,13 +1,9 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: {
-    default: "Sign up",
-    template: `%s | Explorer`,
-  },
+  title: "Sign up",
   description: "Sign up and create an account",
 };
-export const SignUp = () => {
+export default function SignUp() {
   return <div>Signup</div>;
-};
-export default SignUp;
+}
