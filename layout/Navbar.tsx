@@ -1,10 +1,17 @@
+"use client";
+import { useState } from "react";
 import { navItems } from "@/config/Constants";
 import LogoImg from "@/public/images/Logo.svg";
 import Image from "next/image";
 import Link from "next/link";
-import NavbarLogin from "./NavbarLogin";
 
 export const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <section className="section-mobile lg:navbar">
       <div className="content-mobile lg:content ">
@@ -31,7 +38,7 @@ export const Navbar = () => {
                 ))}
               </ul>
             </div>
-            {/* <div className="md:hidden">
+            <div className="md:hidden">
               <button
                 onClick={toggleMenu}
                 className="text-textColor font-semiBold text-xs focus:outline-none flex flex-col justify-center items-center"
@@ -42,9 +49,22 @@ export const Navbar = () => {
                   <span className="block w-8 h-0.5 bg-gray-100 animate-pulse"></span>
                 </div>
               </button>
-            </div> */}
-            <NavbarLogin />
+            </div>
           </div>
+          {isOpen && (
+            <ul className="md:hidden ">
+              {navItems.map((item) => (
+                <li key={item.id} className="py-2">
+                  <Link
+                    className="block px-4 py-2 text-textColor font-semiBold text-xs text-center"
+                    href={item.link}
+                  >
+                    {item.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          )}
         </nav>
       </div>
     </section>
