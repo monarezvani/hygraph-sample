@@ -1,8 +1,8 @@
 import Callout from "@/components/Callout";
 import FeatureSection from "@/components/FeatureSection";
-import Footer from "@/layout/Footer";
+import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
-import Navbar from "@/layout/Navbar";
+import Navbar from "@/components/Navbar";
 import { getData } from "@/services/getData";
 import { Fragment } from "react";
 

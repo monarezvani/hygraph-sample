@@ -7,7 +7,6 @@ export default function Error({
   error: Error & { digest?: string };
   reset: () => void;
 }) {
-  console.log(error, "error");
   return (
     <main className="h-screen w-full flex flex-col justify-center items-center bg-[#1A2238]">
       <section className="bg-white dark:bg-gray-900">
@@ -19,7 +18,12 @@ export default function Error({
             <p className="mb-4 text-xl tracking-tight text-gray-900 md:text-2xl dark:text-white">
               {error.message}
             </p>
-            <button onClick={() => reset()}>Try again</button>
+            <button
+              className="button-primary button-md"
+              onClick={() => reset()}
+            >
+              Try again
+            </button>
           </div>
         </div>
       </section>

@@ -4,6 +4,7 @@
 @tailwind utilities;
 
 @layer components {
+
   .section-mobile {
     @apply py-12 px-8  w-full;
   }
@@ -26,6 +27,9 @@
   .button-secondary {
     @apply bg-secondary text-textColor rounded-lg font-semibold shadow-button text-center w-fit;
   }
+  .button-sm {
+    @apply py-2.5 px-4;
+  }
   .button-md {
     @apply px-5 py-3;
   }
@@ -35,8 +39,10 @@
     @apply px-7 py-4 text-base;
   }
 
-  /* Small Button */
-  .button-sm {
-    @apply py-2.5 px-4;
+  .d-block {
+    display: block;
+  }
+  .d-none {
+    display: none;
   }
 }
