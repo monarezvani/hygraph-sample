@@ -1,5 +1,4 @@
-"use client";
-import { ActionButton, CalloutActionButton } from "@/model/GetDataModel";
+import { CalloutActionButton } from "@/model/GetDataModel";
 import Link from "next/link";
 interface CalloutProps {
   calloutDescription?: string;

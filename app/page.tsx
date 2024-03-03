@@ -1,16 +1,17 @@
 import Callout from "@/components/Callout";
 import FeatureSection from "@/components/FeatureSection";
+import { revalidateTag } from "next/cache";
+
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import { getData } from "@/services/getData";
 import { Fragment } from "react";
 
-export const revalidate = 60;
-
 export default async function Home() {
-  const loadedData = await getData();
+  revalidateTag("fetch");
 
+  const loadedData = await getData();
   const subModels = loadedData.data?.pageModel.subModels;
   return (
     <Fragment>
