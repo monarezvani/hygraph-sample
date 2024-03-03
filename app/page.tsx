@@ -1,22 +1,14 @@
 import Callout from "@/components/Callout";
 import FeatureSection from "@/components/FeatureSection";
-import Footer from "@/components/Footer";
+import Footer from "@/layout/Footer";
 import Hero from "@/components/Hero";
-import { Navbar } from "@/components/Navbar";
+import { Navbar } from "@/layout/Navbar";
 import { getData } from "@/services/getData";
 import { Metadata } from "next";
 import { Fragment } from "react";
 
 export const revalidate = 60;
 
-export const metadata: Metadata = {
-  title: {
-    default: "Hygraph Sample",
-    template: `%s | Explorer`,
-  },
-  description:
-    "A coding challenge including connecting website to a headless CMS and fetch data",
-};
 export default async function Home() {
   const loadedData = await getData();
 

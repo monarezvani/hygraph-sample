@@ -16,9 +16,9 @@ export const Hero = ({
     <section className="section-mobile lg:section ">
       <div className=" content-mobile lg:content  flex flex-col items-center content-stretch content">
         <div className="mb-12">
-          <h1 className="font-bold text-semiLg md:text-xl text-headerColor leading-44 md:leading-72 tracking-title text-center mb-8 w-fit">
+          <h2 className="font-bold text-semiLg md:text-xl text-headerColor leading-44 md:leading-72 tracking-title text-center mb-8 w-fit">
             {heroTitle}
-          </h1>
+          </h2>
           <p className="text-center text-base font-normal leading-30 text-textColor">
             {heroDescription}
           </p>

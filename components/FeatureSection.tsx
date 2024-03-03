@@ -19,8 +19,6 @@ const FeatureSection = ({
   featureSectionDescription,
   index,
 }: FeatureSectionProps) => {
-  console.log(featureSectionMedia?.image?.fileName.split(".").shift());
-
   return (
     <section
       className="section-mobile lg:section mb-8 section-center items-center gap-16 lg:gap-24  "
@@ -34,13 +32,13 @@ const FeatureSection = ({
           
           lg:w-1/2`}
           >
-            <div className=" w-screen relative lg:px-0 px-8 h-[180px] lg:h-[400px]">
+            <div className="w-screen relative h-[180px] lg:h-[400px]">
               {featureSectionMedia.image && (
                 <Image
                   src={featureSectionMedia.image.url}
                   alt={featureSectionMedia.image.fileName.split(".")[0] + index}
                   style={{ objectFit: "contain" }}
-                  sizes="(max-width: 680px) 100%, (max-width: 1200px) 50vw, 33vw"
+                  sizes="(max-width: 680px) 100%"
                   fill
                   className="lg:px-0 px-8"
                   loading="lazy"
