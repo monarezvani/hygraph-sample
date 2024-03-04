@@ -16,9 +16,9 @@ export default function Navbar() {
 
   return (
     <header>
-      <div className="p-4 lg:navbar">
+      <div className=" px-8 py-3 lg:px-16 lg:navbar">
         <div className="content-mobile lg:content ">
-          <nav className="flex flex-row justify-between items-center h-20 px-16">
+          <nav className="flex flex-row justify-between items-center h-20">
             <div className="flex flex-row">
               <Link href="/" prefetch>
                 <figure>
@@ -27,7 +27,7 @@ export default function Navbar() {
               </Link>
               <ul className="items-center d-none md:flex">
                 {navItems.map((item) => (
-                  <li key={item.id} className="mx-2 lg:mx-8 leading-24">
+                  <li key={item.id} className="mx-8 leading-24">
                     <Link
                       className={`font-semiBold text-xs
                      ${path === item.link ? "text-primary" : "text-textColor"}  
