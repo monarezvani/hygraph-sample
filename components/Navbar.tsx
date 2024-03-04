@@ -4,9 +4,11 @@ import { navItems } from "@/config/Constants";
 import LogoImg from "@/public/images/Logo.svg";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const path = usePathname();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -25,7 +27,13 @@ export default function Navbar() {
                 {navItems.map((item) => (
                   <li key={item.id} className="mx-2 lg:mx-8 leading-24">
                     <Link
-                      className="px-8 text-textColor font-semiBold text-xs "
+                      className={`font-semiBold text-xs
+                     ${
+                       path.startsWith(item.link)
+                         ? "text-primary"
+                         : "text-textColor"
+                     }  
+                       `}
                       href={item.link}
                     >
                       {item.title}
@@ -36,15 +44,18 @@ export default function Navbar() {
             </div>
             <div className="d-none md:flex md:items-center">
               <Link
-                className="mx-4 lg:mx-8 text-textColor font-semiBold text-xs"
                 href="/login"
+                className={`font-semiBold text-xs        
+                ${
+                  path.startsWith("/login")
+                    ? "text-primary font-bold"
+                    : "text-textColor"
+                } 
+                `}
               >
                 Login
               </Link>
-              <Link
-                className="mx-2 lg:mx-8 button-primary button-sm"
-                href="/signUp"
-              >
+              <Link className="ml-3 button-primary button-sm" href="/signUp">
                 Sign up
               </Link>
             </div>
@@ -61,82 +72,48 @@ export default function Navbar() {
                 </div>
               </button>
             </div>
-            {isOpen && (
-              <ul className="d-block md:d-none">
-                {navItems.map((item) => (
-                  <li key={item.id} className="py-2">
-                    <Link
-                      className="block px-4 py-2 text-textColor font-semiBold text-xs"
-                      href={item.link}
-                    >
-                      {item.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            )}
           </nav>
-          {/* <nav className="px-8">
-          <div className="content flex flex-row justify-between items-center">
-            <div className="flex flex-row">
-              <div className="flex flex-row items-center">
-                <Image
-                  src={LogoImg}
-                  alt="Logo"
-                  width={97}
-                  height={22}
-                  className="mr-8"
-                />
-                <ul className="flex flex-row items-center">
-                  {navItems.map((item) => (
-                    <li key={item.id} className="mx-8 leading-24">
-                      <Link
-                        className=" mx-8 text-textColor font-semiBold text-xs"
-                        href={item.link}
-                      >
-                        {item.title}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="md:hidden">
-                <button
-                  onClick={toggleMenu}
-                  className="text-textColor font-semiBold text-xs focus:outline-none flex flex-col justify-center items-center"
-                >
-                  <div className="p-4 space-y-2 bg-primary rounded shadow">
-                    <span className="block w-8 h-0.5 bg-gray-100 animate-pulse"></span>
-                    <span className="block w-8 h-0.5 bg-gray-100 animate-pulse"></span>
-                    <span className="block w-8 h-0.5 bg-gray-100 animate-pulse"></span>
-                  </div>
-                </button>
-              </div>
-              <div className="hidden md:flex">
-                <Link
-                  className="text-textColor font-semiBold text-xs mx-8"
-                  href="/login"
-                >
-                  Login
-                </Link>
-              </div>
-            </div>
-          </div>
           {isOpen && (
-            <ul className="md:hidden">
+            <ul className="flex flex-col text-center md:d-none">
               {navItems.map((item) => (
-                <li key={item.id} className="py-2">
+                <li key={item.id} className="py-2 border-b border-primary">
                   <Link
-                    className="block px-4 py-2 text-textColor font-semiBold text-xs"
+                    className={`block px-4 py-2 font-semiBold text-xs
+                    ${
+                      path.startsWith(item.link)
+                        ? "text-primary"
+                        : "text-textColor"
+                    }  
+                    
+                    `}
                     href={item.link}
                   >
                     {item.title}
                   </Link>
                 </li>
               ))}
+              <li className="py-4 border-b border-primary">
+                <Link
+                  className={`block px-4 py-2 font-semiBold text-xs
+                  ${
+                    path.startsWith("/login")
+                      ? "text-primary"
+                      : "text-textColor"
+                  }  
+                  
+                  `}
+                  href="/login"
+                >
+                  Login
+                </Link>
+              </li>
+              <li className="py-4 border-b border-primary">
+                <Link className={"button-primary button-sm"} href="/signUp">
+                  Sign up
+                </Link>
+              </li>
             </ul>
           )}
-        </nav> */}
         </div>
       </div>
     </header>

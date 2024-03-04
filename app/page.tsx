@@ -9,9 +9,9 @@ import { getData } from "@/services/getData";
 import { Fragment } from "react";
 
 export default async function Home() {
-  revalidateTag("fetch");
-
   const loadedData = await getData();
+  revalidateTag("pageModelData");
+
   const subModels = loadedData.data?.pageModel.subModels;
   return (
     <Fragment>
