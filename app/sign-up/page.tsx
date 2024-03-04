@@ -89,7 +89,7 @@ export default function SignUp() {
                 </p>
               </form>
             </div>
-            ;
+            {state.message && <p>{state.message}</p>}
           </div>
         </div>
       </section>

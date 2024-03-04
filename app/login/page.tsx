@@ -95,7 +95,7 @@ export default function Login() {
                 </p>
               </form>
             </div>
-            ;
+            {state.message && <p>{state.message}</p>}
           </div>
         </div>
       </section>

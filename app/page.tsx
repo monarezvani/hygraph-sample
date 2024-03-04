@@ -1,13 +1,21 @@
+import { revalidateTag } from "next/cache";
+import { Fragment } from "react";
 import Callout from "@/components/Callout";
 import FeatureSection from "@/components/FeatureSection";
-import { revalidateTag } from "next/cache";
-
-import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
-import Navbar from "@/components/Navbar";
 import { getData } from "@/services/getData";
-import { Fragment } from "react";
+/*
+This code is the entry point for the Home component of our application.
+ It asynchronously loads data using the getData function and constructs the UI based on the received data.
+  The revalidateTag function is called to ensure that the page model data is refreshed when necessary.
 
+The main structure of the page consists of Hero,FeatureSection, and Callout components,
+ which are dynamically rendered based on the data fetched. Each subModel contains subSections,
+  each of which may include various subBlocks such as heroTitle, featureSectionTitle, and calloutTitle. 
+  These subBlocks are utilized to populate the respective components with content.
+
+Overall, this code demonstrates the use of Next.js for server-side rendering and dynamic UI construction based on fetched data.
+*/
 export default async function Home() {
   const loadedData = await getData();
   revalidateTag("pageModelData");
