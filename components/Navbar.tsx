@@ -44,7 +44,7 @@ export default function Navbar() {
             <div className="d-none md:flex md:items-center">
               <Link
                 href="/login"
-                className={`font-semiBold text-xs        
+                className={`font-semiBold text-xs py-2.5 px-5        
                 ${path === "/login" ? "text-primary" : "text-textColor"} 
                 `}
                 prefetch
@@ -89,7 +89,7 @@ export default function Navbar() {
                   </Link>
                 </li>
               ))}
-              <li className="py-4 border-b border-primary">
+              <li className="py-2 border-b border-primary">
                 <Link
                   className={`block px-4 py-2 font-semiBold text-xs
                   ${path === "/login" ? "text-primary" : "text-textColor"}  
