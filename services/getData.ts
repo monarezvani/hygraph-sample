@@ -10,7 +10,6 @@ export async function getData() {
       },
     },
   });
-  console.log(data, "data");
   if (loading) {
     return { data: null, loading: true, error: null };
   }

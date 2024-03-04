@@ -32,7 +32,7 @@ export default function FeatureSection({
           
           lg:w-1/2`}
           >
-            <div className="w-screen relative h-[180px] lg:h-[400px]">
+            <figure className="w-screen relative h-[180px] lg:h-[400px]">
               {featureSectionMedia.image && (
                 <Image
                   className="lg:px-0 px-8 object-cover lg:object-contain"
@@ -48,19 +48,19 @@ export default function FeatureSection({
                   youtubeVideoEmbed={featureSectionMedia.youtubeVideoEmbed}
                 />
               )}
-            </div>
+            </figure>
           </div>
         )}
         <div className="flex flex-col lg:w-1/2">
-          <span className="capitalize font-extrabold text-primary text-sm">
+          <h4 className="capitalize font-extrabold text-primary text-sm">
             {featureSectionLabel}
-          </span>
+          </h4>
           <h2 className="text-headerColor text-lg font-bold text-lg leading-38 mb-4">
             {featureSectionTitle}
           </h2>
-          <span className="text-left text-textColor text-sm font-normal leading-28">
+          <p className="text-left text-textColor text-sm font-normal leading-28">
             {featureSectionDescription}
-          </span>
+          </p>
           {featureSectionActionButton && (
             <Link
               className="button-primary button-md w-full md:w-fit mt-8"

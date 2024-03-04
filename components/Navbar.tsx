@@ -20,21 +20,20 @@ export default function Navbar() {
         <div className="content-mobile lg:content ">
           <nav className="flex flex-row justify-between items-center h-20 px-16">
             <div className="flex flex-row">
-              <div>
-                <Image src={LogoImg} alt="Logo" width={97} height={22} />
-              </div>
+              <Link href="/" prefetch>
+                <figure>
+                  <Image src={LogoImg} alt="Logo" width={97} height={22} />
+                </figure>
+              </Link>
               <ul className="items-center d-none md:flex">
                 {navItems.map((item) => (
                   <li key={item.id} className="mx-2 lg:mx-8 leading-24">
                     <Link
                       className={`font-semiBold text-xs
-                     ${
-                       path.startsWith(item.link)
-                         ? "text-primary"
-                         : "text-textColor"
-                     }  
+                     ${path === item.link ? "text-primary" : "text-textColor"}  
                        `}
                       href={item.link}
+                      prefetch
                     >
                       {item.title}
                     </Link>
@@ -46,16 +45,17 @@ export default function Navbar() {
               <Link
                 href="/login"
                 className={`font-semiBold text-xs        
-                ${
-                  path.startsWith("/login")
-                    ? "text-primary font-bold"
-                    : "text-textColor"
-                } 
+                ${path === "/login" ? "text-primary" : "text-textColor"} 
                 `}
+                prefetch
               >
                 Login
               </Link>
-              <Link className="ml-3 button-primary button-sm" href="/signUp">
+              <Link
+                className="ml-3 button-primary button-sm"
+                href="/sign-up"
+                prefetch
+              >
                 Sign up
               </Link>
             </div>
@@ -79,14 +79,11 @@ export default function Navbar() {
                 <li key={item.id} className="py-2 border-b border-primary">
                   <Link
                     className={`block px-4 py-2 font-semiBold text-xs
-                    ${
-                      path.startsWith(item.link)
-                        ? "text-primary"
-                        : "text-textColor"
-                    }  
+                    ${path === item.link ? "text-primary" : "text-textColor"}  
                     
                     `}
                     href={item.link}
+                    prefetch
                   >
                     {item.title}
                   </Link>
@@ -95,20 +92,21 @@ export default function Navbar() {
               <li className="py-4 border-b border-primary">
                 <Link
                   className={`block px-4 py-2 font-semiBold text-xs
-                  ${
-                    path.startsWith("/login")
-                      ? "text-primary"
-                      : "text-textColor"
-                  }  
+                  ${path === "/login" ? "text-primary" : "text-textColor"}  
                   
                   `}
+                  prefetch={true}
                   href="/login"
                 >
                   Login
                 </Link>
               </li>
               <li className="py-4 border-b border-primary">
-                <Link className={"button-primary button-sm"} href="/signUp">
+                <Link
+                  className={"button-primary button-sm"}
+                  href="/sign-up"
+                  prefetch
+                >
                   Sign up
                 </Link>
               </li>

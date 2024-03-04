@@ -23,7 +23,7 @@ export default function Hero({
             {heroDescription}
           </p>
         </div>
-        <Fragment>
+        <>
           {heroActionButton && (
             <Link
               href={heroActionButton.buttonUrl}
@@ -32,7 +32,7 @@ export default function Hero({
               {heroActionButton.buttonText}
             </Link>
           )}
-        </Fragment>
+        </>
       </div>
     </section>
   );

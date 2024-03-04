@@ -15,61 +15,57 @@ export default async function Home() {
   const subModels = loadedData.data?.pageModel.subModels;
   return (
     <Fragment>
-      <Navbar />
-      <main className="flex min-h-screen flex-col ">
-        <ul>
-          <Fragment>
-            {subModels?.map((subModel) => (
-              <Fragment key={subModel.id}>
-                {subModel.subSections.map((subSection, index) => (
-                  <Fragment key={subSection.id}>
-                    {subSection.subBlocks.heroTitle && (
-                      <Hero
-                        heroTitle={subSection.subBlocks.heroTitle}
-                        heroDescription={subSection.subBlocks.heroDescription}
-                        heroActionButton={subSection.subBlocks.heroActionButton}
-                      />
-                    )}
+      <main className="flex min-h-screen flex-col  relative">
+        <Fragment>
+          {subModels?.map((subModel) => (
+            <Fragment key={subModel.id}>
+              {subModel.subSections.map((subSection, index) => (
+                <Fragment key={subSection.id}>
+                  {subSection.subBlocks.heroTitle && (
+                    <Hero
+                      heroTitle={subSection.subBlocks.heroTitle}
+                      heroDescription={subSection.subBlocks.heroDescription}
+                      heroActionButton={subSection.subBlocks.heroActionButton}
+                    />
+                  )}
 
-                    {subSection.subBlocks.featureSectionTitle && (
-                      <FeatureSection
-                        featureSectionMedia={
-                          subSection.subBlocks.featureSectionMedia
-                        }
-                        featureSectionTitle={
-                          subSection.subBlocks.featureSectionTitle
-                        }
-                        featureSectionActionButton={
-                          subSection.subBlocks.featureSectionActionButton
-                        }
-                        featureSectionDescription={
-                          subSection.subBlocks.featureSectionDescription
-                        }
-                        featureSectionLabel={
-                          subSection.subBlocks.featureSectionLabel
-                        }
-                        index={index}
-                      />
-                    )}
-                    {subSection.subBlocks.calloutTitle && (
-                      <Callout
-                        calloutTitle={subSection.subBlocks.calloutTitle}
-                        calloutDescription={
-                          subSection.subBlocks.calloutDescription
-                        }
-                        calloutActionButtons={
-                          subSection.subBlocks.calloutActionButtons
-                        }
-                      />
-                    )}
-                  </Fragment>
-                ))}
-              </Fragment>
-            ))}
-          </Fragment>
-        </ul>
+                  {subSection.subBlocks.featureSectionTitle && (
+                    <FeatureSection
+                      featureSectionMedia={
+                        subSection.subBlocks.featureSectionMedia
+                      }
+                      featureSectionTitle={
+                        subSection.subBlocks.featureSectionTitle
+                      }
+                      featureSectionActionButton={
+                        subSection.subBlocks.featureSectionActionButton
+                      }
+                      featureSectionDescription={
+                        subSection.subBlocks.featureSectionDescription
+                      }
+                      featureSectionLabel={
+                        subSection.subBlocks.featureSectionLabel
+                      }
+                      index={index}
+                    />
+                  )}
+                  {subSection.subBlocks.calloutTitle && (
+                    <Callout
+                      calloutTitle={subSection.subBlocks.calloutTitle}
+                      calloutDescription={
+                        subSection.subBlocks.calloutDescription
+                      }
+                      calloutActionButtons={
+                        subSection.subBlocks.calloutActionButtons
+                      }
+                    />
+                  )}
+                </Fragment>
+              ))}
+            </Fragment>
+          ))}
+        </Fragment>
       </main>
-      <Footer />
     </Fragment>
   );
 }

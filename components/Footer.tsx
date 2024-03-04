@@ -15,6 +15,7 @@ export default function Footer() {
                 <Link
                   className="text-footerColor font-normal text-xs "
                   href={item.link}
+                  prefetch
                 >
                   {item.title}
                 </Link>

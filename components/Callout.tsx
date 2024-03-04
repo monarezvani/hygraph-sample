@@ -16,12 +16,12 @@ export default function Callout({
       <div className="content-mobile lg:content ">
         <div className="bg-calloutBg rounded-2xl p-8 lg:p-16 text-secondary flex justify-between flex-col lg:flex-row ">
           <div className="flex flex-col">
-            <span className="text-lg font-bold leading-38 text-secondary">
+            <h2 className="text-lg font-bold leading-38 text-secondary">
               {calloutTitle}
-            </span>
-            <span className="text-left lg:text-center text-base font-normal text-secondary mt-4 leading-30">
+            </h2>
+            <h3 className="text-left lg:text-center text-base font-normal text-secondary mt-4 leading-30">
               {calloutDescription}
-            </span>
+            </h3>
           </div>
 
           <div className="flex flex-col justify-center mt-8 lg:mt-0">
