@@ -10,5 +10,5 @@ export default function YoutubeVideoEmbed({
   youtubeVideoEmbed,
 }: YoutubeVideoEmbedProps) {
   const src = useExtractYoutubeVideoId(youtubeVideoEmbed);
-  return <YouTubeEmbed videoid={src} />;
+  return <YouTubeEmbed videoid={src} width={500} />;
 }
