@@ -16,7 +16,7 @@ export default function Navbar() {
 
   return (
     <header>
-      <div className="section-mobile lg:navbar">
+      <div className="p-4 lg:navbar">
         <div className="content-mobile lg:content ">
           <nav className="flex flex-row justify-between items-center h-20 px-16">
             <div className="flex flex-row">
